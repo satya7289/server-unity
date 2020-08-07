@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "graceful-fs": "^4.2.4",
-    "webshot": "^0.18.0"
+    "express": "^4.17.1"
   }
 }
