@@ -9,8 +9,9 @@ app.use(express.static('public'));
 app.get('/webshot',(req, res, next)=>{
     (async () => {
         var webshot = await captureWebsite.buffer('https://google.com');
-        res.send(webshot);
-        console.log(webshot);
+        // res.send(webshot);
+        // console.log(webshot);
+        res.send("hi");
     })();
     // var requestUrl = req.query.url;
     // if (requestUrl == undefined) requestUrl = 'google.com';
