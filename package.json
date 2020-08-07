@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cross-spawn": "^7.0.3",
+    "express": "^4.17.1",
+    "graceful-fs": "^4.2.4",
+    "phantomjs-prebuilt": "^2.1.16",
+    "tmp": "^0.2.1",
+    "webshot": "^0.18.0"
   }
 }
