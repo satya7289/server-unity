@@ -14,6 +14,7 @@ app.get('/webshot',(req, res, next)=>{
         // console.log(webshot);
         // res.send("hi");
     })();
+    res.send('hiii');
     // var requestUrl = req.query.url;
     // if (requestUrl == undefined) requestUrl = 'google.com';
     // webshot(requestUrl, function (err, renderStream) {
