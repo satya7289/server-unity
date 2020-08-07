@@ -8,13 +8,12 @@ app.use(express.static('public'));
 
 app.get('/webshot',(req, res, next)=>{
     (async () => {
-        await captureWebsite.file('https://google.com','scrrenshot.png');
-        // var webshot = await captureWebsite.buffer('https://google.com');
-        // res.send(webshot);
-        // console.log(webshot);
-        // res.send("hi");
+        // await captureWebsite.file('https://google.com','scrrenshot.png');
+        var webshot = await captureWebsite.buffer('https://google.com');
+        res.send(webshot);
+        console.log(webshot);
     })();
-    res.send('hiii');
+    // res.send('hiii');
     // var requestUrl = req.query.url;
     // if (requestUrl == undefined) requestUrl = 'google.com';
     // webshot(requestUrl, function (err, renderStream) {
