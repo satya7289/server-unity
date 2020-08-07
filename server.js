@@ -8,10 +8,15 @@ app.use(express.static('public'));
 
 app.get('/webshot',(req, res, next)=>{
     (async () => {
-        var webshot = await captureWebsite.buffer('https://sindresorhus.com');
+        var webshot = await captureWebsite.buffer('https://google.com');
         res.send(webshot);
         console.log(webshot);
     })();
+    // var requestUrl = req.query.url;
+    // if (requestUrl == undefined) requestUrl = 'google.com';
+    // webshot(requestUrl, function (err, renderStream) {
+    //     renderStream.pipe(res);
+    // });
 });
 
 
