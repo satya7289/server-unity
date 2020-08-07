@@ -1,17 +1,21 @@
 const express = require('express');
-var webshot = require('webshot');
+// var webshot = require('webshot');
+const captureWebsite = require('capture-website');
 const app = express()
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.get('/webshot',(req, res, next)=>{
-    // res.send("hii");
-    var requestUrl = req.query.url;
-    if (requestUrl == undefined) requestUrl = 'google.com';
-    webshot(requestUrl, function (err, renderStream) {
-        renderStream.pipe(res);
-    });
+    (async () => {
+        await captureWebsite.file('https://sindresorhus.com', 'screenshot.png');
+    })();
+    res.send("hii");
+    // var requestUrl = req.query.url;
+    // if (requestUrl == undefined) requestUrl = 'google.com';
+    // webshot(requestUrl, function (err, renderStream) {
+    //     renderStream.pipe(res);
+    // });
 });
 
 
