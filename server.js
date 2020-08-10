@@ -20,7 +20,7 @@ app.get('/web', function(req, res) {
     if (urlToScreenshot == undefined) urlToScreenshot = 'https://google.com';
     urlToScreenshot = Parse.parseUrl(urlToScreenshot);
     Parse.loadSiteOnSourceHtml(urlToScreenshot);
-    fs.readdir(__dirname + '/HTML', (err, files) => {
+    fs.readdir(__dirname + '/public/HTML', (err, files) => {
         files.forEach(file => {
             if(file.slice(-4)=='html'){
                 (async() => {
@@ -29,7 +29,7 @@ app.get('/web', function(req, res) {
                     });
 
                     const page = await browser.newPage();
-                    const html = fs.readFileSync(__dirname+'/HTML/'+file,'utf-8');
+                    const html = fs.readFileSync(__dirname+'/public/HTML/'+file,'utf-8');
                     await page.setContent(html);
                     await page.screenshot({path:__dirname+'/public/images/'+file.slice(0,-4) + 'png'});
                     await browser.close();
@@ -55,7 +55,7 @@ app.get('/web', function(req, res) {
 
 
 
-app.get('/a', function(req,res){
+app.get('/', function(req,res){
     // var data = fs.readFile(__dirname+ '/screenshot.png',(error,data)=>{
     //     console.log(data,"satay");
     // });

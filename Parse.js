@@ -2,8 +2,8 @@ const request = require('request');
 const fs = require('fs');
 const cheerio = require("cheerio");
 
-const sourceHTML = '/HTML/sourceHTML.txt';
-const HTML_PATH = '/HTML/';
+const sourceHTML = '/public/HTML/sourceHTML.txt';
+const HTML_PATH = '/public/HTML/';
 const head_path = 'head.txt';
 const body_path = 'body.txt';
 const script_path = 'script.txt';
@@ -71,10 +71,10 @@ var parseHtml = (path)=> {
 }
 
 var remHTMLAndImagesFIle = ()=>{
-    fs.readdir(__dirname + '/HTML',(err,files)=>{
+    fs.readdir(__dirname + '/public/HTML',(err,files)=>{
         files.forEach(file=>{
             if(file.slice(-4)=='html'){
-                fs.unlinkSync(__dirname+'/HTML/'+file);
+                fs.unlinkSync(__dirname+'/public/HTML/'+file);
             }
         })
     })
