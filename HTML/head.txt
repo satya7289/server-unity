@@ -1,0 +1,78 @@
+<head>
+
+        <title>node.js - Remove directory which is not empty - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+        <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a"> 
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+        <link rel="canonical" href="https://stackoverflow.com/questions/18052762/remove-directory-which-is-not-empty">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://stackoverflow.com/questions/18052762/remove-directory-which-is-not-empty">
+        <meta property="og:site_name" content="Stack Overflow">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="stackoverflow.com">
+        <meta name="twitter:title" property="og:title" itemprop="name" content="Remove directory which is not empty">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="In my Node application I need to remove a directory which has some files, but fs.rmdir only works on empty directories. How can I do this?">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.sstatic.net/Js/stub.en.js?v=0ea540ca35e3"></script>
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=4a96165f0781">
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=6b143f8b0e4c">
+
+    
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &apos;Remove directory which is not empty&apos;" href="/feeds/question/18052762">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/18052762/remove-directory-which-is-not-empty">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/18052762/remove-directory-which-is-not-empty">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/18052762/remove-directory-which-is-not-empty">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+            StackExchange.ready(function () {
+
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,questionId:18052762});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '18052762');
+                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+                
+                
+            });
+        </script>
+
+        
+        
+        
+        
+        
+        
+        
+
+
+    <script>
+        StackExchange.init({"locale":"en","serverTime":1597036804,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"5436a01ea31fe5789be3cc44d07e8bed1ae49e107cf7fc3bf1d2fca0a62cc3e5","tid":"4045c914-128d-8542-50e9-af526290add9","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/svg-icons","svgIconHash":"1930da5a1bd7"}, {"userProfile":{"openGraphAPIKey":"4a307e43-b625-49bb-af15-ffadf2bda017"},"userMessaging":{"showNewFeatureNotice":true},"tags":{},"subscriptions":{"defaultMaxTrueUpSeats":1000},"snippets":{"renderDomain":"stacksnippets.net","snippetsEnabled":true},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad","sidebarAdDismissCookieExpirationDays":60.0},"site":{"allowImageUploads":true,"enableImgurHttps":true,"enableUserHovercards":true,"forceHttpsImages":true,"styleCode":true},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{"asteriskIntraWordEmphasis":true,"enableCommonmark":true},"flags":{"allowRetractingCommentFlags":true,"allowRetractingFlags":true},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}});
+        StackExchange.using.setCacheBreakers({"js/adops.en.js":"22a9bd59b1e9","js/ask.en.js":"1c0a624e1e04","js/begin-edit-event.en.js":"b6f47dd7a88c","js/events.en.js":"8e9d31d6ff38","js/explore-qlist.en.js":"222b04ca33bc","js/full-anon.en.js":"dea88d9b90dd","js/full.en.js":"9b1ba9882d25","js/help.en.js":"a70790feefe7","js/inline-tag-editing.en.js":"ba6fb20dd10f","js/keyboard-shortcuts.en.js":"e8b90b16ca4a","js/mobile.en.js":"dd28a9c9ca2d","js/moderator.en.js":"ece69b69d5f3","js/postCollections-transpiled.en.js":"63d879a2d646","js/post-validation.en.js":"c449696bbec1","js/prettify-full.en.js":"e0d2f8fd1c78","js/question-editor.en.js":"","js/review.en.js":"829ff73082f6","js/revisions.en.js":"d8d5fa1f473d","js/tageditor.en.js":"0f8e52381303","js/tageditornew.en.js":"1e44c264ce38","js/tagsuggestions.en.js":"9b2c5d9791d2","js/third-party/stacks-editor/app.bundle.js":"72999662ddbd","js/third-party/stacks-editor/app.bundle.en.js":"","js/wmd.en.js":"da358c11d36f","js/snippet-javascript-codemirror.en.js":"89671e0621b2","js/markdown-it-loader.en.js":"a51a4850b0ea"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
