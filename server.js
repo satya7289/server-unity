@@ -55,7 +55,7 @@ app.get('/web', function(req, res) {
 
 
 
-app.get('/', function(req,res){
+app.get('/a', function(req,res){
     // var data = fs.readFile(__dirname+ '/screenshot.png',(error,data)=>{
     //     console.log(data,"satay");
     // });
@@ -91,7 +91,7 @@ app.get('/webshot', function(req, res) {
 
 });
 
-app.use(static('public'));
+app.use(express.static(path.join(__dirname, 'public')))
 app.listen(port, function() {
     console.log('Server is running on port ' + port)
 })
